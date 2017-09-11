@@ -4,7 +4,7 @@ console.info('loaded')
 console.warn('loaded')
 
 var arr1 = [];
-for (var i = 0; i < 5; i++) {
+for (var i = 0; i < 10; i++) {
     arr1.push(i);
 
 }
