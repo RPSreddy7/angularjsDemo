@@ -49,36 +49,55 @@ var test = {
 //console.log(test['inida']);
 //console.log(test['us']);
 
-//console.log(empList['EMPLOYEES'][1]['Name'])
+//console.log(empList['EMPLOYEES'][2]['Name'])
+//console.log(empList['State']);
+
+
 
 for (myvar in empList) {
-    console.log("Key >>>>>", myvar, " : Value :", empList[myvar], " :data type: ", typeof empList[myvar])
-    //console.log(myvar)
+    console.log("Keys= ", myvar, "Values :", empList[myvar], "data type: ", typeof empList[myvar])
+
+    console.log(myvar)
 
     if (typeof empList[myvar] === 'object') {
-        //console.log(" --------------  ")
+        
         for (var i = 0; i < empList[myvar].length; i++) {
             var record = empList[myvar][i];
             for (prasad in record) {
-                //console.log(record[prasad])
+                console.log(record[prasad])
             }
         }
-       // console.log(" --------------  ")
+       
     }
 
 }
 
 
-''
+// for(obj in empList){
+//     console.log("Keys=", obj, "Value:", empList[obj], "data type:", typeof empList[obj]);
+//     console.log(obj, empList[obj], typeof empList[obj]);
+//     console.log(obj);
+// }
+
+
+
+// ---------------below "objStr" is a string -----------------
+
+
 var objStr = '{"id": 323232,"Name": "xxxxxxx","DOB": "new Date()","salary": 34343.51,"isIndian": true,"prevEmp": "null"}';
 console.log(" string ",objStr);
 
+// ------------convert from string to object----------------
+
 var convertObj = JSON.parse(objStr);
-console.log(" obj ",convertObj,' --id - ',convertObj['id']);
+console.log(" object= ",convertObj, " id =",convertObj['id']);
 
 
-convertObj['Name'] = "ravindra";
+//-------------- name changed-----------------
+console.log("Name=", convertObj['Name'] = "ravindra");
+
+//------------- convert from object to string
 
 var convertStr= JSON.stringify(convertObj);
 
-console.log(" convertStr ",convertStr);
+console.log(" convert to String ",convertStr);
