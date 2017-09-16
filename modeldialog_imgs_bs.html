@@ -8,17 +8,22 @@
     <style type="text/css">
     .imgs {
         display: inline-block;
-        margin: 10px;        
-    		}
-    .zidx{position: absolute;z-index: -2;}
-    
-    .clsdisp{display:inline;background-color:cyan;color:red;}
-    .clsvisb{visibility: hidden;}
+        margin: 10px;
+    }
+    /*.zidx{position: absolute;z-index: -2;}*/
 
+    .clsdisp {
+        display: inline;
+        background-color: cyan;
+        color: red;
+    }
+
+    .clsvisb {
+        visibility: hidden;
+    }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- <script src="JS/expjsonobj.js"></script> -->
 </head>
 
 <body>
@@ -29,7 +34,7 @@
             <img src="mock-ups/Hyd photo.jpg" class="img-rounded zidx" alt="Cinque Terre" width="304" height="236">
             <p> Prasad ...</p>
         </div>
-        <!-- <div class="imgs">
+        <div class="imgs">
             <h4>Circle Image</h4>
             <img src="mock-ups/Hyd_Photo1.jpg" class="img-circle" alt="Cinque Terre" width="304" height="236">
             <p> Image 2 ............</p>
@@ -38,11 +43,10 @@
             <h4>Thumbnail(Image of outside border) Image</h4>
             <img src="mock-ups/PKR.jpg" class="img-thumbnail" alt="Cinque Terre" width="250" height="250">
             <p> Image 3 ............</p>
-        </div> -->
+        </div>
         <br>
-
-        <!-- Table structure 
-        <!-- <div>
+        <!-- Table structure  -->
+        <div>
             <h3>Bootstrap Table</h3>
             <table class="table table-bordered table-hover">
                 <thead>
@@ -71,9 +75,9 @@
                 </tbody>
             </table>
         </div>
-        <br> -->
+        <br>
         <!-- Modal(popup) Dialog box on the page  -->
-        <!-- <div>
+        <div>
             <h4>Modal(popup) Dialog box on the page</h4>
             <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
             <div class="modal fade" id="myModal" role="dialog">
@@ -94,10 +98,10 @@
             </div>
         </div>
         <br>
-        <br> -->
-        <!-- Form elements -->
+        <br>
+        <!-- Form elements
         <!-- datalist-->
-        <!-- <h4>datalist form elemect:</h4>
+        <h4>datalist form elemect:</h4>
         <form>
             <input list="browsers" name="browser">
             <datalist id="browsers">
@@ -109,9 +113,9 @@
             </datalist>
             <input type="submit">
         </form>
-        <br> -->
+        <br>
         <!-- Keygen -->
-        <!-- <h4>Keygen form elemect: </h4>
+        <h4>Keygen form elemect: </h4>
         <form>
             Username:
             <input type="text" name="user">
@@ -122,9 +126,8 @@
             <br>
             <br>
         </form>
-        <br>
-        <!-- output -->
-        <!-- <h4>output form elemect:</h4>
+        <br> output
+        <h4>output form elemect:</h4>
         <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
             0
             <input type="range" id="a" name="a" value="50"> 100 +
@@ -132,34 +135,23 @@
             <output name="x" for="a b"></output>
             <br>
             <input type="submit">
-        </form>  -->
-
-		<!-- Display and visibility diff -->
-
-		<!--  <div>
-			<p>1. Hai this is visibility property 555555</p>
-
-		</div>
-
-		<div class="clsdisp">
-			<p> 2.Hai this is display property</p>
-
-		</div>
-		
-		 <div class="clsdisp">
-			<p> 3. Hai this is display property 22222</p>
-
-		</div>
-		 <div class="clsdisp">
-			<p> 4. Hai this is display property 33333</p>
-
-		</div>
-		 <div >
-			<p> 5. Hai this is visibility property 44444</p>
-
-		</div>
- -->
-		
+        </form>
+        Display and visibility diff
+        <div>
+            <p>1. Hai this is visibility property 555555</p>
+        </div>
+        <div class="clsdisp">
+            <p> 2.Hai this is display property</p>
+        </div>
+        <div class="clsdisp">
+            <p> 3. Hai this is display property 22222</p>
+        </div>
+        <div class="clsdisp">
+            <p> 4. Hai this is display property 33333</p>
+        </div>
+        <div>
+            <p> 5. Hai this is visibility property 44444</p>
+        </div>
     </div>
 </body>
 

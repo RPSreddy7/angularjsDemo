@@ -84,24 +84,57 @@
 
 //---------Another Example-------------------------------------------------------------
 
-// var obj = {
-//     "menu": {
-//         "id": "file",
-//         "value": "File",
-//         "popup": {
-//             "menuitem": [
-//                 { "value": "New", "onclick": "CreateNewDoc()" },
-//                 { "value": "Open", "onclick": "OpenDoc()" },
-//                 { "value": "Close", "onclick": "CloseDoc()" }
-//             ]
-//         }
-//     }
-// }
+var obj = {
+    "menu": {
+        "id": 123456,
+        "value": "Prasad Reddy",
+        "popup": {
+            "menuitem": [{
+                    "value": "New",
+                    "onclick": "CreateNewDoc()",
+                    "events": {
+                        "name": "Ravindra",
+                        "states": ["ap", "ka"]
+                    }
+                },
+                {
+                    "value": "Open",
+                    "onclick": "OpenDoc()",
+                    "states": ["bangalore", "AP"]
+                },
+                { "value": "Close", "onclick": "CloseDoc()" }
+            ]
+        }
+    }
+}
 
+
+function recursion(obj) {
+    if (Array.isArray(obj)) {
+        for (var i = 0; i < obj.length; i++) {
+            console.log('Array >>>>>>>>>> ', obj[i]);
+            if (typeof obj[i] === 'object') {
+                recursion(obj[i]);
+            }
+        }
+    } else {
+        for (key in obj) {
+            console.log('Object >>>>>>>>>> ', obj[key]);
+            if (typeof obj[key] === 'object') {
+                recursion(obj[key]);
+            }
+
+        }
+    }
+
+}
+
+
+//recursion(obj);
 
 
 // for (obj1 in obj) {
-//     console.log(obj1, obj[obj1], typeof obj[obj1]);
+//     console.log(obj1, obj[obj1], typeof obj[obj1], Array.isArray(obj[obj1]));
 //     var obj1info = obj[obj1];
 //     if (typeof obj1info === 'object')
 //         for (mobj in obj1info) {
@@ -138,43 +171,41 @@ function func(n) {
     if (n == 0 || n == 1) {
         return 1;
     }
-   var result = n;
+    var result = n;
 
     while (n > 1) {
-        
+
         result = result * (n - 1);
         n = n - 1;
 
     }
     return result;
 
-   // recursion process
+    // recursion process
 
-   // return n*func(n-1);
+    // return n*func(n-1);
 
 
 }
 
-    document.write(func(6));
-   // console.log(func(5));
+//document.write(func(6));
+// console.log(func(5));
 
 //-----------------------------------------------
 
 
-function func1(n){
+function func1(n) {
 
-    if(n>5){
+    if (n > 5) {
 
         return n;
-    }
+    } else {
 
-    else{
-
-        return n+func1(n-1);
+        return n + func1(n - 1);
     }
 
 }
-document.write("--------------------",func1(4));
+//document.write("--------------------",func1(4));
 
 //------------------------------------------------------
 
@@ -183,21 +214,21 @@ function func(n) {
     if (n == 0 || n == 1) {
         return 1;
     }
-   //var result = n;
+    //var result = n;
 
     // while (n > 1) {
-        
+
     //     result = result * (n - 1);
     //     n = n - 1;
 
     // }
 
 
-   // recursion process
+    // recursion process
 
-   return n*func(n-1);
+    return n * func(n - 1);
 
 
 }
 
-    document.write(func(4));
+//document.write(func(4));
