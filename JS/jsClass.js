@@ -17,6 +17,7 @@ function arthmetic(a, b) {
 
     this.addcustom = function(x, y) {
         return (x + y + counter)
+
     }
 
     this.sub = function() {
@@ -29,20 +30,20 @@ function arthmetic(a, b) {
 var myInstance = new arthmetic(10, 20);
 console.log(myInstance);
 //console.log(myInstance.multiply())
-//console.log(myInstance.add())
-//console.log(myInstance.addcustom(15,30))
+console.log(myInstance.add())
+console.log(myInstance.addcustom(15,30))
 
 
 var myInstance1 = new arthmetic(40, 20);
 console.log(myInstance1)
 //console.log(myInstance1.multiply())
-//console.log(myInstance1.add())
+console.log(myInstance1.add())
 
-//console.log(myInstance.sub());
-//console.log(myInstance1.sub());
+console.log(myInstance.sub());
+console.log(myInstance1.sub());
 
 // ---------------------
-//  classname.prototype.yourproperty or fun name 
+//  classname.prototype.yourpropertyname or fun name 
 
 arthmetic.prototype.city = "Ravindra";
 arthmetic.prototype.multiply = function() {
@@ -56,3 +57,5 @@ console.log(myInstance2)
 console.log(myInstance2.multiply())
 console.log(myInstance2.multiplyparam(12, 12))
 console.log(myInstance.multiply())
+
+
