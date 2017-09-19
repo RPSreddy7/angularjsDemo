@@ -84,29 +84,25 @@
 
 //---------Another Example-------------------------------------------------------------
 
-var obj = {
-    "menu": {
-        "id": 123456,
-        "value": "Prasad Reddy",
-        "popup": {
-            "menuitem": [{
-                    "value": "New",
-                    "onclick": "CreateNewDoc()",
-                    "events": {
-                        "name": "Ravindra",
-                        "states": ["ap", "ka"]
+var obj = { "menu": { "id": 123456,
+                      "value": "Prasad Reddy",
+                      "popup": { "menuitem": [{ "key1": "New",
+                                                "key2": "CreateNewDoc()",
+                                                "key3": { "name": "Ravindra",
+                                                          "states": ["ap", "ka"]
+                                                        }
+                                              },
+                                              { "value": "Open",
+                                                "onclick": "OpenDoc()",
+                                                "states": ["bangalore", "AP"]
+                                              },
+                                              { "value": "Close",
+                                                "onclick": "CloseDoc()"
+                                              }
+                                             ]
+                                }
                     }
-                },
-                {
-                    "value": "Open",
-                    "onclick": "OpenDoc()",
-                    "states": ["bangalore", "AP"]
-                },
-                { "value": "Close", "onclick": "CloseDoc()" }
-            ]
-        }
-    }
-}
+          }
 
 
 function recursion(obj) {
@@ -130,8 +126,9 @@ function recursion(obj) {
 }
 
 
-//recursion(obj);
+recursion(obj);
 
+    //-----------------------------------------------------------------
 
 // for (obj1 in obj) {
 //     console.log(obj1, obj[obj1], typeof obj[obj1], Array.isArray(obj[obj1]));
@@ -164,7 +161,6 @@ function recursion(obj) {
 
 
 //----------------------recursion function or loop in JS-------------------------------
-
 
 function func(n) {
 
